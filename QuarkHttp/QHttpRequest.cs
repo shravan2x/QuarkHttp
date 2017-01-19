@@ -34,7 +34,7 @@ namespace QuarkHttp
             UserAgent = DefaultUserAgent;
             Version = HttpVersion.Version11;
             Referrer = null;
-            KeepAlive = false;
+            KeepAlive = true;
         }
 
         public QHttpRequest(string url) : this()
