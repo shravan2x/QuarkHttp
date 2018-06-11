@@ -238,7 +238,7 @@ namespace QuarkHttp
             get
             {
                 if (_isUrlLastUsed)
-                    _queryParams = _url.Query.Length > 1 ? _url.Query.Substring(1).MakeCollection("=", "&") : new NameValueCollection();
+                    _queryParams = _url.Query.Length > 1 ? _url.Query.Substring(1).MakeCollection("=", "&", true) : new NameValueCollection();
 
                 _isUrlLastUsed = false;
                 return _queryParams;
