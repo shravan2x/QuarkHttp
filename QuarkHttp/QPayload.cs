@@ -8,7 +8,7 @@ namespace QuarkHttp
         private byte[] _content;
         private Stream _stream;
 
-        public readonly bool IsStream;
+        public bool IsStream { get; }
 
         public QPayload()
         {
@@ -70,7 +70,7 @@ namespace QuarkHttp
 
         public void Dispose()
         {
-            Stream.Dispose();
+            Stream?.Dispose();
         }
 
         private static byte[] ReadToEnd(Stream stream)
