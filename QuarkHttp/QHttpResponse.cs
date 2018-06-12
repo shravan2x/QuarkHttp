@@ -8,7 +8,7 @@ namespace QuarkHttp
     {
         public QPayload Payload { get; set; }
         public WebHeaderCollection Headers { get; set; }
-        public HttpStatusCode StatusCode { get; set; }
+        public QHttpStatusCode StatusCode { get; set; }
         public string StatusDescription { get; set; }
 
         public QHttpResponse()

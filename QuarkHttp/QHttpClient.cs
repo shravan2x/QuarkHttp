@@ -186,7 +186,7 @@ namespace QuarkHttp
 
                 _webResponse = webResponse;
                 Headers = _webResponse.Headers;
-                StatusCode = _webResponse.StatusCode;
+                StatusCode = (QHttpStatusCode) _webResponse.StatusCode;
                 StatusDescription = _webResponse.StatusDescription;
 
                 if (isFetchResponse)

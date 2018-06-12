@@ -22,7 +22,7 @@ namespace QuarkHttp
 
         public Stream BaseStream => _destBase;
 
-        public void WriteStatus(HttpStatusCode statusCode, string statusDescription = null, Version httpVersion = null)
+        public void WriteStatus(QHttpStatusCode statusCode, string statusDescription = null, Version httpVersion = null)
         {
             Version finalHttpVersion = httpVersion ?? HttpVersion.Version11;
             string finalStatusDescription = statusDescription ?? HttpWorkerRequest.GetStatusDescription((int) statusCode);
