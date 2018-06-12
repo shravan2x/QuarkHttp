@@ -15,7 +15,6 @@ namespace QuarkHttp
         private WebHeaderCollection _extraHeaders;
         private Version _version;
 
-        public EQHttpMethod Method { get; set; }
         public QPayload Payload { get; set; }
         public bool KeepAlive { get; set; }
         public string Referrer { get; set; }
@@ -26,8 +25,8 @@ namespace QuarkHttp
         {
             UrlBuilder = new UriBuilder();
 
-            Method = EQHttpMethod.Get;
             Headers = new WebHeaderCollection();
+            Method = QHttpMethod.Get;
 
             Accept = DefaultAccept;
             ContentType = DefaultContentType;
