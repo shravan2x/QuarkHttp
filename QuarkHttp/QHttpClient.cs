@@ -15,7 +15,7 @@ namespace QuarkHttp
             HttpWebRequest webRequest = (HttpWebRequest) WebRequest.Create(request.Url);
             webRequest.AllowAutoRedirect = isAllowRedirects;
             webRequest.ProtocolVersion = request.Version;
-            webRequest.Method = request.Method.Name();
+            webRequest.Method = request.Method.ToString().ToUpper();
             webRequest.Accept = request.Accept;
             webRequest.Connection = request.Connection;
             webRequest.ContentType = request.ContentType;
@@ -68,7 +68,7 @@ namespace QuarkHttp
             HttpWebRequest webRequest = (HttpWebRequest) WebRequest.Create(request.Url);
             webRequest.AllowAutoRedirect = isAllowRedirects;
             webRequest.ProtocolVersion = request.Version;
-            webRequest.Method = request.Method.Name();
+            webRequest.Method = request.Method.ToString().ToUpper();
             webRequest.Accept = request.Accept;
             webRequest.Connection = request.Connection;
             webRequest.ContentType = request.ContentType;

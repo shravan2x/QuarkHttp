@@ -136,7 +136,7 @@ namespace QuarkHttp
                 if (tokens.Length != 3)
                     throw new Exception("Invalid HTTP Request line");
 
-                _request.Method = QHttpMethodMethods.Parse(tokens[0]);
+                _request.Method = (QHttpMethod) Enum.Parse(typeof(QHttpMethod), tokens[0]);
                 _request.Url = "http://example.com" + tokens[1];
 
                 switch (tokens[2])
