@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\QuarkHttp.Payloads.Json\QuarkHttp.Payloads.Json.csproj" />
     <ProjectReference Include="..\QuarkHttp\QuarkHttp.csproj" />
   </ItemGroup>
 
